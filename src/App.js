@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Landing from "./components/layout/Landing";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ContextProvider from "./contexts";
+import { About, Auth, Dashboard } from "./views";
+import { ProtectedRoute } from "./components/routing";
+import "font-awesome/css/font-awesome.css";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<ContextProvider>
+				<Routes>
+					<Route path="/" element={<Landing />} />
+					<Route path="/login" element={<Auth authRoute="login" />} />
+					<Route path="/register" element={<Auth authRoute="register" />} />
+					<Route
+						path="/dashboard"
+						element={
+							<ProtectedRoute>
+								<Dashboard />
+							</ProtectedRoute>
+						}
+					/>
+					<Route
+						path="/about"
+						element={
+							<ProtectedRoute>
+								<About />
+							</ProtectedRoute>
+						}
+					/>
+				</Routes>
+			</ContextProvider>
+		</div>
+	);
 }
 
 export default App;
