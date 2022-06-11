@@ -36,7 +36,7 @@ const AuthContextProvider = ({ children }) => {
 				throw Error();
 			}
 		} catch (err) {
-			console.log("err");
+			console.log(Error);
 			localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME);
 			setAuthToken();
 			dispatch({
@@ -54,8 +54,12 @@ const AuthContextProvider = ({ children }) => {
 			await loadUser();
 			return res.data;
 		} catch (err) {
-			if (err.response.data) return { message: err.response.data.message };
-			else return { message: err };
+			return {
+				success: false,
+				message: err.response.data
+					? err.response.data.message
+					: JSON.stringify(err),
+			};
 		}
 	};
 	//registerUser
@@ -67,8 +71,12 @@ const AuthContextProvider = ({ children }) => {
 			const res = await axios.post(`${apiRegister}`, userForm);
 			return res.data;
 		} catch (err) {
-			if (err.response.data) return { message: err.response.data.message };
-			else return { message: err };
+			return {
+				success: false,
+				message: err.response.data
+					? err.response.data.message
+					: JSON.stringify(err),
+			};
 		}
 	};
 

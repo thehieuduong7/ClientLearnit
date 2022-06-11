@@ -1,7 +1,7 @@
-export const apiUrl =
-	process.env.NODE_ENV !== "production"
-		? "http://localhost:5000/api"
-		: "https://server-learnit-1.herokuapp.com/api";
+export const apiUrl = "https://mern-learnit-server1.herokuapp.com/api";
+// process.env.NODE_ENV !== "production"
+// 	? "http://localhost1:5000/api"
+// 	: "https://server-learnit-1.herokuapp.com/api";
 //post login
 export const apiLogin = apiUrl + "/auth/login";
 export const apiVerify = apiUrl + "/auth";

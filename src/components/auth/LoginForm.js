@@ -32,6 +32,7 @@ const LoginForm = () => {
 	}, [alert]);
 	const onClickSubmit = async (e) => {
 		const loginData = await loginUser(stateForm);
+		console.log(loginData);
 		if (loginData.success) {
 			navigate("/dashboard", { replace: true });
 			console.log("dashboard");
