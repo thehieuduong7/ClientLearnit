@@ -12,7 +12,6 @@
 - Purpose: Deploy client REACTJS
 - Deploy: 
   + client: https://mern-learnit-client1.herokuapp.com/
-     (username: thehieu, password: 1)
     (source code client: https://github.com/thehieuduong7/ClientLearnit)
   + server api: https://mern-learnit-server1.herokuapp.com/api
     (source code server: https://github.com/thehieuduong7/ServerLearnit)
