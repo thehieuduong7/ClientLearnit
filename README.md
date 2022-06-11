@@ -1,23 +1,18 @@
-## Available Scripts
-
-In the project directory, you can run:
 
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-
-# CLIENT REACTJS
-
+# CLIENT LEARNIT
 - Member: 1
-- REACTJS
+- Tech: MongoDB, Express, ReactJS, NodeJS
 - Function:
   - Login/Register and sign token access
   - RESTFul API
   - CRUD Post
 - Purpose: Deploy client REACTJS
+- Deploy: 
+  + client: https://mern-learnit-client1.herokuapp.com/
+     (username: thehieu, password: 1)
+    (source code client: https://github.com/thehieuduong7/ClientLearnit)
+  + server api: https://mern-learnit-server1.herokuapp.com/api
+    (source code server: https://github.com/thehieuduong7/ServerLearnit)
