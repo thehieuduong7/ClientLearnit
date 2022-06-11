@@ -9,7 +9,7 @@
   - Login/Register and sign token access
   - RESTFul API
   - CRUD Post
-- Purpose: Deploy client REACTJS
+- Purpose: Practice with ReactJs
 - Deploy: 
   + client: https://mern-learnit-client1.herokuapp.com/
     (source code client: https://github.com/thehieuduong7/ClientLearnit)
